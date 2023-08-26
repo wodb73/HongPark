@@ -1,0 +1,26 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#article}}
+    <tr>
+        <th>{{id}}</th>
+        <td>{{title}}</td>
+        <td>{{content}}</td>
+    </tr>
+        {{/article}}
+    </tbody>
+</table>
+<a href="/articles">Go To Article List</a>
+<a href="/articles/{{id}}/edit" class="btn btn-primary">Edit</a>
+<a href="/articles/{{id}}/delete" class="btn btn-danger">Delete</a>
+
+{{>comments/_comments}}
+{{>layouts/footer}}
